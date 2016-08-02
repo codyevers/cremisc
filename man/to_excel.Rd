@@ -8,8 +8,6 @@ to_excel(x)
 }
 \description{
 \code{to_excel} copies a data.frame to the clipboard, ready to be copied into excel
-}
-\details{
 This function makes it easier to transfer data from R into excel.
 }
 

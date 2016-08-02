@@ -8,8 +8,6 @@ from_excel()
 }
 \description{
 \code{from_excel} reads tabular data copied from excel,
-}
-\details{
 This function makes it easier to transfer data from excel into R.
 }
 

@@ -1,9 +1,8 @@
 #' Copy tabular data from excel
 #'
 #' \code{to_excel} copies a data.frame to the clipboard, ready to be copied into excel
-#'
 #' This function makes it easier to transfer data from R into excel.
-
+#' @export
 to_excel <- function(x){
   os <- Sys.info()['sysname']
   if(os == 'Windows') write.table(x, "clipboard-500", sep="\t", row.names=FALSE)
@@ -12,10 +11,8 @@ to_excel <- function(x){
 #' Copy tabular data from excel
 #'
 #' \code{from_excel} reads tabular data copied from excel,
-#'
 #' This function makes it easier to transfer data from excel into R.
-#'
-
+#' @export
 from_excel <- function(){
   os <- Sys.info()['sysname']
   if(os == 'Windows') x <- read.delim("clipboard")
@@ -26,16 +23,13 @@ from_excel <- function(){
 #' Load packages
 #'
 #' \code{loadPackages} loads packages and installs it if needed.
-#'
 #' This function is meant to replace the tedious task of loading packages and
 #' loading them individual. Here, everything is handled in a single step.
-#'
 #' @param ... sequence of packages to load
-#'
 #' @examples
 #' loadPackages(ape, xtable)
+#' @export
 #'
-
 load_packages <- function(...){
 
   # prepare list of packages to load
